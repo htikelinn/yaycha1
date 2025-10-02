@@ -3,13 +3,29 @@ import App from './App'
 import { AppContext } from './AppContext';
 import { CssBaseline, createTheme, ThemeProvider, Snackbar } from '@mui/material'
 import { deepPurple, grey } from '@mui/material/colors';
-import AppDrawer from './components/AppDrawer';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Template from './Template';
+import Home from './pages/Home';
 
 // const theme = createTheme({
 //     palette: {
 //         mode: 'dark'
 //     }
 // })
+
+const router = createBrowserRouter([
+    {
+        path:"/",
+        element: <Template />,
+        children: [
+            {
+                path: "/",
+                element: <Home />
+            }
+        ],
+    },
+])
+
 
 
 export default function ThemedApp() {
@@ -34,15 +50,7 @@ export default function ThemedApp() {
             <AppContext.Provider value={{ showForm, setShowForm, mode, setMode,
                 showDrawer, setShowDrawer, globalMsg, setGlobalMsg, auth, setAuth
              }}>
-                <App />
-                <AppDrawer />
-                <Snackbar anchorOrigin={{
-                    horizontal: "center",
-                    vertical: "bottom",
-                }} open = {Boolean(globalMsg)}
-                autoHideDuration={6000}
-                onClose={() => setGlobalMsg(null)}
-                message = {globalMsg} />
+                <RouterProvider router={router} />
                 <CssBaseline />
             </AppContext.Provider>
         </ThemeProvider>

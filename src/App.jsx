@@ -1,28 +1,10 @@
-import React, { useState } from 'react'
 import Item from './components/Item'
 import Form from './components/Form'
-import { AppContext, useApp } from './AppContext'
 import { Box } from "@mui/material";
 import Container from '@mui/material/Container';
 import Header from './components/Header'
 
 export default function App() {
-  const {showForm, setGlobalMsg } = useApp();
-  const [data, setData] = useState([
-    { id: 1, content: "Hello Htin", name: "Htin" },
-    { id: 2, content: "React tutorial", name: "Phyo" },
-    { id: 3, content: "I love Phyo", name: "Zaw" }])
-
-  const remove = id => {
-    setData(data.filter(item => item.id !== id))
-    setGlobalMsg("An item deleted")
-  }
-
-  const add = (content, name) => {
-    const id = data[data.length - 1].id + 1;
-    setData([...data, { id, content, name }])
-    setGlobalMsg("An item added")
-  }
 
 
   // const { mode, setMode } = useContext(AppContext);
@@ -57,13 +39,7 @@ export default function App() {
     //   </div>
     // </div>
     <Box>
-      <Header />
-      <Container maxWidth='sm' sx={{ mt: 4 }} >
-        {showForm && <Form add={add} />}
-        {data.map(i => {
-          return (<Item key={i.id} item={i} remove={remove} />)
-        })}
-        </Container>
+      {/* <Header /> */}
     </Box>
   )
   
