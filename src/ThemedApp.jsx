@@ -1,12 +1,15 @@
 import React, { useMemo, useState } from 'react'
-import App from './App'
 import { AppContext } from './AppContext';
 import { CssBaseline, createTheme, ThemeProvider, Snackbar } from '@mui/material'
 import { deepPurple, grey } from '@mui/material/colors';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Template from './Template';
 import Home from './pages/Home';
-
+import Register from './pages/Register';
+import Likes from './pages/Likes';
+import Login from './pages/Login';
+import Profile from './pages/Profile';
+import Comments from './pages/Commets';
 // const theme = createTheme({
 //     palette: {
 //         mode: 'dark'
@@ -21,6 +24,26 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />
+            },
+            {
+                path: "/login",
+                element: <Login />
+            },
+            {
+                path: "/register",
+                element: <Register />
+            },
+            {
+                path: "/comments/:id",
+                element: <Comments />
+            },
+            {
+                path: "/likes/:id",
+                element: <Likes />
+            },
+            {
+                path: "/profile/:id",
+                element: <Profile />
             }
         ],
     },
@@ -34,6 +57,7 @@ export default function ThemedApp() {
     const [showDrawer, setShowDrawer] = useState(false)
     const [globalMsg, setGlobalMsg] = useState(null)
     const [auth, setAuth] = useState(null)
+
     
 
     const theme = useMemo(() => {

@@ -8,7 +8,6 @@ import {
     DarkMode,
 } from "@mui/icons-material";
 import { useApp } from '../AppContext';
-import AppDrawer from './AppDrawer';
 
 export default function Header() {
     const { showForm, setShowForm, mode, setMode, setShowDrawer } = useApp();
