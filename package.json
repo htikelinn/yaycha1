@@ -13,8 +13,11 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@fontsource/roboto": "^5.2.8",
+    "@fsouza/prettierd": "^0.26.2",
     "@mui/icons-material": "^7.3.2",
     "@mui/material": "^7.3.2",
+    "eslint_d": "^14.3.0",
+    "fixjson": "^1.1.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.3"
