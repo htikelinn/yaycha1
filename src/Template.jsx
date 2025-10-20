@@ -1,6 +1,5 @@
 
 import { Box, Container, Snackbar } from '@mui/material'
-import React from 'react'
 import { useApp } from './AppContext'
 import Header from './components/Header';
 import AppDrawer from './components/AppDrawer';
