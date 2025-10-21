@@ -1,12 +1,10 @@
-import Item from './components/Item'
-import Form from './components/Form'
+import Item from "./components/Item";
+import Form from "./components/Form";
 import { Box } from "@mui/material";
-import Container from '@mui/material/Container';
-import Header from './components/Header'
+import Container from "@mui/material/Container";
+import Header from "./components/Header";
 
 export default function App() {
-
-
   // const { mode, setMode } = useContext(AppContext);
   // const { mode, setMode } = useApp();
   return (
@@ -38,9 +36,6 @@ export default function App() {
     //     </List>
     //   </div>
     // </div>
-    <Box>
-
-      {/* <Header /> */}
-    </Box>
-  )
+    <Box>{/* <Header /> */}</Box>
+  );
 }
