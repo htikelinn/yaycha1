@@ -16,6 +16,8 @@
     "@fsouza/prettierd": "^0.26.2",
     "@mui/icons-material": "^7.3.2",
     "@mui/material": "^7.3.2",
+    "@tanstack/react-query": "^5.90.5",
+    "date-fns": "^4.1.0",
     "eslint_d": "^14.3.0",
     "fixjson": "^1.1.2",
     "react": "^19.1.1",
